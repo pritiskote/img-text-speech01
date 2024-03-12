@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text-Speech</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- <form id="myForm">
+
+        <input type="text" name="myText" id="myText">
+        
+        </form> -->
+    <label for="largeTextarea"
+      >Please insert the text you would like to be read out loud:</label
+    >
+    <textarea
+      id="largeTextarea"
+      name="largeTextarea"
+      rows="10"
+      cols="50"
+      placeholder="Enter text to be read out..."
+    ></textarea>
+    <br />
+    <button id="submitButtonEng">Listen in English</button>
+    <button id="summarize">Summarize</button>
+    <div
+      id="dropbox"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      onclick="openFileInput()"
+    >
+      <p id="message">
+        If you cannot copy and paste your text, take a screenshot (JPG or PNG)
+        and upload it here.
+      </p>
+    </div>
+
+    <div id="result"></div>
+
+    <input
+      type="file"
+      id="fileInput"
+      accept="image/*"
+      onchange="handleFileChange(this.files)"
+    />
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="./index.js" charset="utf-8"></script>
+  </body>
+</html>
